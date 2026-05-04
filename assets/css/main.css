@@ -1,3 +1,12 @@
+/* Fonte maior para listas do bloco Sobre Mim */
+.sobre-lista-grande li {
+  font-size: 1.35rem;
+}
+.sobre-lista-grande strong,
+.sobre-lista-grande span,
+.sobre-lista-grande a {
+  font-size: 1.25rem;
+}
 /**
 * Template Name: Laura
 * Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
@@ -69,7 +78,7 @@ body {
 }
 
 p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.7;
   margin-bottom: 15px;
   
@@ -307,7 +316,7 @@ h6 {
   }
 
   .navmenu .dropdown ul a i {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .navmenu .dropdown ul a:hover,
@@ -1587,5 +1596,20 @@ section,
   padding: 10px 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   margin-bottom: 20px;
+}
+
+/* Efeito de Cursor Piscando */
+.typed-cursor {
+  opacity: 1;
+  font-weight: 400;
+  color: var(--accent-color);
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 

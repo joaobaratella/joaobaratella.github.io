@@ -28,8 +28,9 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">João Baratella</h1>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-white text-decoration-none">
+        <i class="bi bi-terminal fs-2 me-2"></i> <!-- Ícone de terminal -->
+        <h1 class="sitename mb-0">JB</h1> <!-- Iniciais -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -57,7 +58,7 @@
       <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
         <h2>João Baratella</h2>
         <p>Estudante de Sistemas de Informação na USP</p>
-        <p>DESENVOLVEDOR BACKEND | AUTOMAÇÃO DE SISTEMAS | INTEGRAÇÃO DE APIs</p>
+        <p><span class="typed" data-typed-items="DESENVOLVEDOR BACKEND, AUTOMAÇÃO DE SISTEMAS, INTEGRAÇÃO DE APIs"></span><span class="typed-cursor" aria-hidden="true">|</span></p>
         <a href="#about" class="btn-scroll" title="Scroll Down"><i class="bi bi-chevron-down"></i></a>
       </div>
     </section><section id="about" class="about section text-center">
@@ -75,14 +76,14 @@
             
             <div class="row justify-content-center mt-4">
               <div class="col-lg-5">
-                <ul class="list-unstyled">
+                <ul class="list-unstyled sobre-lista-grande">
                   <li><i class="bi bi-chevron-right text-primary"></i> <strong>Email:</strong> <span>jpbaratella@usp.br</span></li>
                   <li><i class="bi bi-chevron-right text-primary"></i> <strong>Instituição:</strong> <span>USP São Carlos</span></li>
                   <li><i class="bi bi-chevron-right text-primary"></i> <strong>Área:</strong> <span>Sistemas de Informação</span></li>
                 </ul>
               </div>
               <div class="col-lg-5">
-                <ul class="list-unstyled">
+                <ul class="list-unstyled sobre-lista-grande">
                   <li><i class="bi bi-chevron-right text-primary"></i> <strong>GitHub:</strong> <span><a href="https://github.com/joaobaratella" target="_blank">joaobaratella</a></span></li>
                   <li><i class="bi bi-chevron-right text-primary"></i> <strong>Especialização:</strong> <span>Backend Python</span></li>
                   <li><i class="bi bi-chevron-right text-primary"></i> <strong>Experiência:</strong> <span>Desenvolvimento & Automação</span></li>
@@ -296,7 +297,46 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const typed = document.querySelector('.typed');
+    if (typed) {
+      let items = typed.getAttribute('data-typed-items');
+      items = items.split(',');
+      let currentItem = 0;
+      let currentText = '';
+      let isDeleting = false;
+      let typeSpeed = 100;
 
+      function type() {
+        const fullText = items[currentItem];
+
+        if (isDeleting) {
+          currentText = fullText.substring(0, currentText.length - 1);
+          typeSpeed = 50; // Velocidade ao apagar
+        } else {
+          currentText = fullText.substring(0, currentText.length + 1);
+          typeSpeed = 100; // Velocidade ao digitar
+        }
+
+        typed.textContent = currentText;
+
+        if (!isDeleting && currentText === fullText) {
+          isDeleting = true;
+          typeSpeed = 2000; // Pausa no final da frase
+        } else if (isDeleting && currentText === '') {
+          isDeleting = false;
+          currentItem = (currentItem + 1) % items.length;
+          typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+      }
+
+      type();
+    }
+  });
+  </script>
 </body>
 
 </html>
