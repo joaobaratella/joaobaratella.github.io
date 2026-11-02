@@ -1,342 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>João Baratella - Portfólio</title>
-  <meta name="description" content="Portfólio profissional de João Baratella - Desenvolvedor Backend Python, FastAPI e Automação">
-  <meta name="keywords" content="Python, FastAPI, Backend, Automação, PIX, Desenvolvimento">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>João Pedro Baratella Mattos | Dados e Tecnologia</title>
+  <meta name="description" content="Estudante de Sistemas de Informação na USP (ICMC, São Carlos). Projetos reais de automação, análise de dados e sites institucionais. Busco estágio em Dados ou Tecnologia.">
+  <meta name="author" content="João Pedro Baratella Mattos">
+  <meta name="theme-color" content="#F2F4F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12171E" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://joaobaratella.github.io/">
 
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://joaobaratella.github.io/">
+  <meta property="og:title" content="João Pedro Baratella Mattos | Dados e Tecnologia">
+  <meta property="og:description" content="Estudante de Sistemas de Informação na USP. Projetos reais de automação, análise de dados e sites institucionais.">
+  <meta property="og:image" content="https://joaobaratella.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Quicksand:wght@300;400;500;600;700&family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-white text-decoration-none">
-        <i class="bi bi-terminal fs-2 me-2"></i> <!-- Ícone de terminal -->
-        <h1 class="sitename mb-0">JB</h1> <!-- Iniciais -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
+  <header class="topo">
+    <div class="wrap topo-in">
+      <a class="marca" href="#inicio">João Pedro Baratella Mattos</a>
+      <nav aria-label="Seções">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">Sobre Mim</a></li>
-          <li><a href="#resume">Habilidades</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <div class="header-social-links">
-        <a href="https://github.com/joaobaratella" target="_blank" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/in/joaobaratella" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
     </div>
   </header>
 
-  <main class="main">
+  <main id="conteudo">
 
-    <section id="hero" class="hero section dark-background text-center">
-      <img src="assets/img/zTI.png" alt="" data-aos="fade-in">
-      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <h2>João Baratella</h2>
-        <p>Estudante de Sistemas de Informação na USP</p>
-        <p><span class="typed" data-typed-items="DESENVOLVEDOR BACKEND, AUTOMAÇÃO DE SISTEMAS, INTEGRAÇÃO DE APIs"></span><span class="typed-cursor" aria-hidden="true">|</span></p>
-        <a href="#about" class="btn-scroll" title="Scroll Down"><i class="bi bi-chevron-down"></i></a>
-      </div>
-    </section><section id="about" class="about section text-center">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Sobre mim</span>
-        <h2>Sobre Mim</h2>
-      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-10 content">
-            <h2>Desenvolvedor Backend &amp; Especialista em Automação</h2>
-            <p class="fst-italic py-3">
-              Estudante de Sistemas de Informação na USP São Carlos, focado em desenvolvimento backend e arquitetura de software. 
-              Apaixonado por Python, automação de processos e integração de APIs de pagamento.
-            </p>
-            
-            <div class="row justify-content-center mt-4">
-              <div class="col-lg-5">
-                <ul class="list-unstyled sobre-lista-grande">
-                  <li><i class="bi bi-chevron-right text-primary"></i> <strong>Email:</strong> <span>jpbaratella@usp.br</span></li>
-                  <li><i class="bi bi-chevron-right text-primary"></i> <strong>Instituição:</strong> <span>USP São Carlos</span></li>
-                  <li><i class="bi bi-chevron-right text-primary"></i> <strong>Área:</strong> <span>Sistemas de Informação</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-5">
-                <ul class="list-unstyled sobre-lista-grande">
-                  <li><i class="bi bi-chevron-right text-primary"></i> <strong>GitHub:</strong> <span><a href="https://github.com/joaobaratella" target="_blank">joaobaratella</a></span></li>
-                  <li><i class="bi bi-chevron-right text-primary"></i> <strong>Especialização:</strong> <span>Backend Python</span></li>
-                  <li><i class="bi bi-chevron-right text-primary"></i> <strong>Experiência:</strong> <span>Desenvolvimento & Automação</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <section class="capa" id="inicio" aria-labelledby="titulo">
+      <div class="wrap">
+        <h1 id="titulo">João Pedro Baratella Mattos</h1>
+        <p class="capa-lead">Estudante de Sistemas de Informação na USP (ICMC, São Carlos), no 6º semestre. Identifico gargalos com as equipes, integro sistemas, automatizo processos e construo dashboards para a gestão.</p>
+        <p class="capa-texto">Busco estágio em Dados ou Tecnologia.</p>
+        <div class="acoes">
+          <a class="btn btn-p" href="#projetos">Ver projetos</a>
+          <a class="btn btn-s" href="mailto:jpbaratella07@gmail.com">Enviar e-mail</a>
+          <a class="btn btn-s" href="https://www.linkedin.com/in/joaobaratella" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-    </section><section id="resume" class="resume section text-center">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Habilidades</span>
-        <h2>Habilidades e Competências</h2>
-      </div><div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5 mx-2" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title mb-4">Habilidades Técnicas</h3>
+    </section>
 
-            <div class="resume-item pb-4">
-              <h4>Python & FastAPI</h4>
-              <p><em>Desenvolvimento de APIs e aplicações backend com FastAPI, seguindo as melhores práticas de desenvolvimento.</em></p>
-            </div>
-
-            <div class="resume-item pb-4">
-              <h4>Banco de Dados</h4>
-              <p><em>PostgreSQL</em></p>
-              <ul class="list-unstyled">
-                <li>Design e otimização de schemas</li>
-                <li>Queries complexas e índices</li>
-                <li>Gestão de dados em produção</li>
-              </ul>
-            </div>
-
-            <div class="resume-item pb-4">
-              <h4>Automação e Integração</h4>
-              <p><em>Sistemas de automação PIX e integração com APIs</em></p>
-              <ul class="list-unstyled">
-                <li>Automação de Pagamentos PIX (Bradesco API)</li>
-                <li>Webhooks e processamento de eventos</li>
-                <li>Integração com Google Sheets</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-5 mx-2" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title mb-4">Habilidades Interpessoais</h3>
-            
-            <div class="resume-item pb-4">
-              <h4>Liderança e Gestão</h4>
-              <p><em>Experiência em coordenação de projetos e trabalho em equipe</em></p>
-              <ul class="list-unstyled">
-                <li>Liderança de projetos técnicos</li>
-                <li>Gestão de Projetos ágil</li>
-                <li>Comunicação técnica clara</li>
-              </ul>
-            </div>
-
-            <div class="resume-item pb-4">
-              <h4>Resolução de Problemas</h4>
-              <p><em>Abordagem analítica para resolução de desafios técnicos complexos</em></p>
-              <ul class="list-unstyled">
-                <li>Debugging e otimização de performance</li>
-                <li>Arquitetura escalável de sistemas</li>
-                <li>Implementação de soluções robustas</li>
-              </ul>
-            </div>
-
-            <div class="resume-item pb-4">
-              <h4>Interesses Tecnológicos</h4>
-              <p><em>Áreas de foco e desenvolvimento contínuo</em></p>
-              <ul class="list-unstyled">
-                <li>Desenvolvimento Python avançado</li>
-                <li>Automação de sistemas</li>
-                <li>Integração de APIs de pagamento</li>
-              </ul>
-            </div>
-          </div>
+    <section class="secao" id="projetos" aria-labelledby="projetos-titulo">
+      <div class="wrap">
+        <div class="secao-cab">
+          <h2 id="projetos-titulo">Experiência em projetos</h2>
+          <p>Projetos reais para empresas, sem vínculo formal. Em todos, levantei as necessidades com quem usaria a solução antes de construir.</p>
         </div>
-      </div>
-    </section><section id="portfolio" class="portfolio section text-center">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Portfólio</span>
-        <h2>Portfólio de Projetos</h2>
-        <p>Principais projetos desenvolvidos</p>
-      </div><div class="container">
-        <div class="row gy-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          
-          <div class="col-lg-5 col-md-6">
-            <div class="card h-100 shadow-sm border-0 text-start">
-              <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                  <i class="bi bi-currency-exchange text-primary me-3" style="font-size: 2rem;"></i>
-                  <h4 class="card-title fw-bold mb-0 fs-5">Automação de Pagamentos PIX</h4>
-                </div>
-                <p class="card-text text-muted mb-4 flex-grow-1">
-                  Sistema backend desenvolvido em Python e FastAPI que processa notificações de pagamento via Webhooks utilizando a API do Bradesco, registrando os dados automaticamente no Google Sheets.
-                </p>
-                <div class="mt-auto border-top pt-3">
-                  <h6 class="fw-bold mb-1 fs-6">Tecnologias Utilizadas:</h6>
-                  <p class="small text-secondary mb-0">n8n, Webhooks, Google Sheets API, Bradesco API, Docker</p>
-                </div>
-              </div>
-            </div>
-          </div><div class="col-lg-5 col-md-6">
-            <div class="card h-100 shadow-sm border-0 text-start">
-              <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                  <i class="bi bi-truck text-primary me-3" style="font-size: 2rem;"></i>
-                  <h4 class="card-title fw-bold mb-0 fs-5">A Loja do Dilo Transportes</h4>
-                </div>
-                <p class="card-text text-muted mb-4 flex-grow-1">
-                  Desenvolvimento de site institucional expositivo para apresentar os serviços da transportadora. O projeto focou em estabelecer a presença digital da empresa, com layout responsivo e botões de contato rápido e direto para facilitar a comunicação com os clientes.
-                </p>
-                <div class="mt-auto border-top pt-3">
-                  <h6 class="fw-bold mb-1 fs-6">Tecnologias Utilizadas:</h6>
-                  <p class="small text-secondary mb-0">Desenvolvimento Web Front-end, Design Responsivo, Integração de Links de Contato</p>
-                </div>
-              </div>
-            </div>
-          </div></div>
-      </div>
-    </section><section id="contact" class="contact section text-center">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Contato</span>
-        <h2>Entre em Contato</h2>
-        <p>Vamos conversar sobre novas oportunidades e projetos</p>
-      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center shadow-sm p-4 rounded">
-              <i class="bi bi-envelope fs-2 mb-3 text-primary"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:jpbaratella@usp.br" class="text-decoration-none">jpbaratella@usp.br</a></p>
-            </div>
-          </div><div class="col-lg-4 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center shadow-sm p-4 rounded">
-              <i class="bi bi-github fs-2 mb-3 text-primary"></i>
-              <h3>GitHub</h3>
-              <p><a href="https://github.com/joaobaratella" target="_blank" class="text-decoration-none">github.com/joaobaratella</a></p>
-            </div>
-          </div><div class="col-lg-4 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center shadow-sm p-4 rounded">
-              <i class="bi bi-buildings fs-2 mb-3 text-primary"></i>
-              <h3>Localização</h3>
-              <p>USP São Carlos, Brasil</p>
-            </div>
-          </div></div>
-
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control text-center" placeholder="Seu Nome" required="">
-                </div>
-                <div class="col-md-6">
-                  <input type="email" class="form-control text-center" name="email" placeholder="Seu Email" required="">
-                </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control text-center" name="subject" placeholder="Assunto" required="">
-                </div>
-                <div class="col-md-12">
-                  <textarea class="form-control text-center" name="message" rows="6" placeholder="Mensagem" required=""></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading">Enviando...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Sua mensagem foi enviada com sucesso!</div>
-                  <button type="submit" class="btn btn-primary mt-3 px-5 py-2">Enviar Mensagem</button>
-                </div>
+        <article class="projeto destaque" aria-labelledby="p1">
+          <div class="projeto-meta">
+            <h3 id="p1">Automação de confirmação de recebimentos bancários e análise financeira</h3>
+            <p class="periodo">mai. 2026 a atual</p>
+            <p>Loja de materiais de construção. Replicada em uma transportadora rodoviária.</p>
+            <p class="obs">Código e relatórios privados, pois usam dados financeiros reais.</p>
+          </div>
+            <figure class="fluxo" aria-labelledby="fluxo-legenda">
+              <div class="fluxo-linha">
+                <p class="fluxo-rotulo">Antes</p>
+                <ol class="passos">
+                  <li>Cliente mostra o comprovante</li>
+                  <li class="gargalo">Caixa espera o financeiro</li>
+                  <li>Financeiro confere o extrato</li>
+                  <li>Caixa confirma o pagamento</li>
+                </ol>
+                <p class="fluxo-efeito"><strong>De 3 a 8 minutos por transação.</strong> Sem o extrato, comprovantes falsos passavam.</p>
               </div>
-            </form>
+              <div class="fluxo-linha">
+                <p class="fluxo-rotulo">Depois</p>
+                <ol class="passos">
+                  <li>Pagamento cai na conta</li>
+                  <li class="auto">n8n integra as APIs Pix e Extrato</li>
+                  <li class="auto">Aviso no WhatsApp do caixa</li>
+                </ol>
+                <p class="fluxo-efeito"><strong>Aviso em tempo real, validado pelo extrato.</strong> Cerca de 30 transações por dia, em duas empresas.</p>
+              </div>
+              <div class="fluxo-linha">
+                <p class="fluxo-rotulo">Gestão</p>
+                <ol class="passos">
+                  <li>Registro no Google Sheets</li>
+                  <li class="auto">Dashboards no Power BI</li>
+                  <li class="auto">Relatório mensal em Python</li>
+                </ol>
+                <p class="fluxo-efeito"><strong>Visões diária, semanal e mensal.</strong> Concentração de faturamento por cliente, enviada por e-mail.</p>
+              </div>
+              <figcaption id="fluxo-legenda">Resumo do projeto: como a confirmação de recebimentos funcionava antes, como funciona hoje e o que a gestão passou a receber. Em amarelo, o gargalo. Em azul, o que passou a ser automático.</figcaption>
+            </figure>
+          <div class="projeto-corpo">
+            <div>
+              <h4>Ponto de partida</h4>
+              <p>Mapeei o processo com vendedores, caixa e financeiro. A confirmação de cada pagamento dependia do financeiro, único com acesso ao extrato, e levava de 3 a 8 minutos por transação. Pagamentos remotos só eram identificados quando o cliente avisava. Sem o extrato, o caixa aceitava o comprovante do cliente, e alguns eram falsos.</p>
+            </div>
+            <div>
+              <h4>O que fiz</h4>
+              <p>Integrei as APIs Pix e de Extrato do Bradesco ao n8n e ao WhatsApp. O caixa passou a receber em tempo real os avisos de Pix, TED e transferências entre contas, validados pelo extrato e não pelo comprovante.</p>
+            </div>
+            <div>
+              <h4>Resultado</h4>
+              <p>A consulta manual acabou, inclusive nos pagamentos remotos, e a validação pelo extrato eliminou as tentativas de fraude com comprovantes falsos. A solução roda em Docker numa VPS, foi replicada em uma segunda empresa e segue em uso, com cerca de 30 transações por dia. Sigo fazendo a manutenção.</p>
+            </div>
+          </div>
+          <div class="gestao">
+            <h4>Dados para a gestão</h4>
+            <p>Criei dashboards no Power BI com visões diária, semanal e mensal. Eles mostram o valor recebido por dia, a média diária, a divisão por tipo de Pix, por período do mês e por dia da semana, e o ranking de clientes por valor.</p>
+            <p>Também escrevi uma análise mensal em Python, com pandas e matplotlib, dos recebimentos e da concentração de faturamento por cliente. O relatório é enviado automaticamente por e-mail. Os recebimentos também ficam registrados em planilhas de acompanhamento no Google Sheets.</p>
+          </div>
+          <figure class="painel-bi">
+            <a href="assets/img/painel-power-bi.webp" target="_blank" rel="noopener"><img src="assets/img/painel-power-bi.webp" width="1442" height="806" loading="lazy" decoding="async" alt="Painel de recebimentos em Power BI com dados fictícios. Mostra o valor recebido em cada dia do mês em colunas, a média por dia, a divisão por tipo de pagamento (Pix QR Code, transferência Pix e TED), a distribuição por período do mês e por dia da semana, e filtros por empresa, mês e ano."></a>
+            <figcaption>Painel em Power BI com o mesmo layout do painel real, carregado com dados fictícios. O painel real fica privado porque mostra faturamento e nomes de clientes. <a href="assets/img/painel-power-bi.webp" target="_blank" rel="noopener">Abrir em tamanho real<span class="sr"> (abre em nova aba)</span></a></figcaption>
+          </figure>
+          <div class="stack">
+            <h5>Tecnologias</h5>
+            <ul>
+              <li>n8n</li><li>APIs Bradesco (Pix e Extrato)</li><li>API WhatsApp</li><li>Python (pandas, matplotlib)</li><li>Google Sheets</li><li>Power BI</li><li>Docker</li><li>VPS</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="projeto" aria-labelledby="p2">
+          <div class="projeto-meta">
+            <h3 id="p2">Sites institucionais</h3>
+            <p>As duas empresas não tinham site. Nos dois casos, levantei os requisitos com os responsáveis e entreguei o site no ar.</p>
+          </div>
+          <div class="projeto-corpo">
+            <div class="site">
+              <h4>A Loja do Dilo Materiais para Construção</h4>
+              <p class="periodo">ago. a set. 2026</p>
+              <p>Desenvolvi uma vitrine digital com categorias, produtos e ofertas do mês, feita com apoio de IA (Claude Code) e publicada na Vercel. O site leva o cliente direto ao atendimento via WhatsApp para orçamentos e encomendas.</p>
+              <p class="site-link"><a class="link-ext" href="https://www.alojadodilomateriais.com.br" target="_blank" rel="noopener">alojadodilomateriais.com.br<span class="sr"> (abre em nova aba)</span></a></p>
+              <ul class="tags" aria-label="Tecnologias"><li>Claude Code</li><li>Vercel</li><li>Integração com WhatsApp</li></ul>
+            </div>
+            <div class="site">
+              <h4>A Loja do Dilo Transportes</h4>
+              <p class="periodo">jan. a mar. 2025</p>
+              <p>Desenvolvi o site institucional em WordPress, hospedado na Hostinger. Hoje ele é o principal canal de apresentação da empresa a novos clientes.</p>
+              <p class="site-link"><a class="link-ext" href="https://alojadodilotransportes.com.br" target="_blank" rel="noopener">alojadodilotransportes.com.br<span class="sr"> (abre em nova aba)</span></a></p>
+              <ul class="tags" aria-label="Tecnologias"><li>WordPress</li><li>Hostinger</li></ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao" id="habilidades" aria-labelledby="habilidades-titulo">
+      <div class="wrap">
+        <div class="secao-cab">
+          <h2 id="habilidades-titulo">Habilidades</h2>
+        </div>
+        <dl class="habilidades">
+          <div><dt>Dados e análise</dt><dd>SQL / PostgreSQL, Python (pandas, matplotlib)</dd></div>
+          <div><dt>Visualização</dt><dd>Power BI, Excel</dd></div>
+          <div><dt>Automação e infraestrutura</dt><dd>n8n, Docker, VPS, APIs REST</dd></div>
+          <div><dt>Linguagens</dt><dd>Python, Java, C</dd></div>
+          <div><dt>Versionamento</dt><dd>Git / GitHub</dd></div>
+          <div><dt>Produtividade com IA</dt><dd>Desenvolvimento assistido por IA (Claude Code) e uso de LLMs na análise de dados</dd></div>
+          <div class="estudo"><dt>Em estudo</dt><dd>Machine learning com Python</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="secao" id="formacao" aria-labelledby="formacao-titulo">
+      <div class="wrap">
+        <div class="secao-cab">
+          <h2 id="formacao-titulo">Formação</h2>
+        </div>
+        <div class="formacao">
+          <div>
+            <h3>Bacharelado em Sistemas de Informação</h3>
+            <p>Universidade de São Paulo, ICMC, São Carlos</p>
+            <p class="periodo">2024 a dez. 2027 (previsto). Atualmente no 6º semestre.</p>
+            <h3 class="idioma">Idiomas</h3>
+            <p>Português: nativo. Inglês: intermediário.</p>
+          </div>
+          <div>
+            <h3>Certificações</h3>
+            <ul class="certs">
+              <li><strong>PostgreSQL for Everybody</strong><span>University of Michigan, Coursera. Ago. 2026.</span></li>
+              <li><strong>Python for Everybody</strong><span>University of Michigan, Coursera. Abr. 2026.</span></li>
+              <!-- PENDENTE: datas de conclusão dos dois cursos abaixo. -->
+              <li><strong>Introduction to Data Science in Python e Applied Plotting, Charting &amp; Data Representation in Python</strong><span>University of Michigan, Coursera. 2 de 5 cursos de uma especialização em andamento.</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="contato" id="contato" aria-labelledby="contato-titulo">
+      <div class="wrap">
+        <h2 id="contato-titulo">Contato</h2>
+        <p class="contato-texto">Busco estágio em Dados ou Tecnologia. Moro em São Carlos (SP) e aceito vagas remotas ou híbridas em São Paulo.</p>
+        <div class="email">
+          <a href="mailto:jpbaratella07@gmail.com">jpbaratella07@gmail.com</a>
+          <button type="button" class="copiar" data-copiar="jpbaratella07@gmail.com" hidden>Copiar e-mail</button>
+          <span class="copiado" role="status" aria-live="polite"></span>
+        </div>
+        <ul class="redes">
+          <li><a href="https://www.linkedin.com/in/joaobaratella" target="_blank" rel="noopener">LinkedIn<span class="sr"> (abre em nova aba)</span></a><span>linkedin.com/in/joaobaratella</span></li>
+          <li><a href="https://github.com/joaobaratella" target="_blank" rel="noopener">GitHub<span class="sr"> (abre em nova aba)</span></a><span>github.com/joaobaratella</span></li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
-  <footer id="footer" class="footer position-relative text-center dark-background py-5">
-    <div class="container">
-      <h3 class="mb-3">João Baratella</h3>
-      <p class="mb-4">Desenvolvedor Backend focado em automação de sistemas, arquitetura de software e integração de APIs de pagamento.</p>
-      
-      <div class="social-links d-flex justify-content-center mb-4">
-        <a href="https://github.com/joaobaratella" target="_blank" class="mx-2 fs-4"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/in/joaobaratella" target="_blank" class="mx-2 fs-4"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:jpbaratella@usp.br" class="mx-2 fs-4"><i class="bi bi-envelope"></i></a>
-      </div>
-      
-      <div class="copyright">
-        <span>Copyright</span> <strong class="px-1 sitename">João Baratella</strong> <span>2024 - Todos os direitos reservados</span>
-      </div>
-      <div class="credits mt-2">
-        Template by <a href="https://bootstrapmade.com/" class="text-decoration-none">BootstrapMade</a> | Adaptado para Portfólio
-      </div>
+  <footer class="rodape">
+    <div class="wrap">
+      <p>© 2026 João Pedro Baratella Mattos</p>
+      <p><a href="https://github.com/joaobaratella/joaobaratella.github.io" target="_blank" rel="noopener">Código deste site no GitHub<span class="sr"> (abre em nova aba)</span></a></p>
     </div>
   </footer>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const typed = document.querySelector('.typed');
-    if (typed) {
-      let items = typed.getAttribute('data-typed-items');
-      items = items.split(',');
-      let currentItem = 0;
-      let currentText = '';
-      let isDeleting = false;
-      let typeSpeed = 100;
-
-      function type() {
-        const fullText = items[currentItem];
-
-        if (isDeleting) {
-          currentText = fullText.substring(0, currentText.length - 1);
-          typeSpeed = 50; // Velocidade ao apagar
-        } else {
-          currentText = fullText.substring(0, currentText.length + 1);
-          typeSpeed = 100; // Velocidade ao digitar
-        }
-
-        typed.textContent = currentText;
-
-        if (!isDeleting && currentText === fullText) {
-          isDeleting = true;
-          typeSpeed = 2000; // Pausa no final da frase
-        } else if (isDeleting && currentText === '') {
-          isDeleting = false;
-          currentItem = (currentItem + 1) % items.length;
-          typeSpeed = 500;
-        }
-
-        setTimeout(type, typeSpeed);
-      }
-
-      type();
-    }
-  });
-  </script>
 </body>
-
 </html>
