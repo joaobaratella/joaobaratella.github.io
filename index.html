@@ -63,14 +63,14 @@
     <section class="secao" id="projetos" aria-labelledby="projetos-titulo">
       <div class="wrap">
         <div class="secao-cab">
-          <h2 id="projetos-titulo">Experiência em projetos</h2>
-          <p>Projetos reais para empresas, sem vínculo formal. Em todos, levantei as necessidades com quem usaria a solução antes de construir.</p>
+          <h2 id="projetos-titulo">Experiência</h2>
+          <p>Projetos reais para empresas, como desenvolvedor freelancer. Em todos, levantei as necessidades com quem usaria a solução antes de construir.</p>
         </div>
 
         <article class="projeto destaque" aria-labelledby="p1">
           <div class="projeto-meta">
             <h3 id="p1">Automação de confirmação de recebimentos bancários e análise financeira</h3>
-            <p class="periodo">mai. 2026 a atual</p>
+            <p class="periodo">abr. 2026 a jun. 2026 · Desenvolvedor Freelancer</p>
             <p>Loja de materiais de construção. Replicada em uma transportadora rodoviária.</p>
             <p class="obs">Código e relatórios privados, pois usam dados financeiros reais.</p>
           </div>
@@ -78,12 +78,12 @@
               <div class="fluxo-linha">
                 <p class="fluxo-rotulo">Antes</p>
                 <ol class="passos">
-                  <li>Cliente mostra o comprovante</li>
-                  <li class="gargalo">Caixa espera o financeiro</li>
-                  <li>Financeiro confere o extrato</li>
-                  <li>Caixa confirma o pagamento</li>
+                  <li>Cliente envia o comprovante ao vendedor</li>
+                  <li>Vendedor repassa ao grupo do caixa e financeiro</li>
+                  <li class="gargalo">Caixa espera o financeiro confirmar</li>
+                  <li>Baixa no sistema</li>
                 </ol>
-                <p class="fluxo-efeito"><strong>De 3 a 8 minutos por transação.</strong> Sem o extrato, comprovantes falsos passavam.</p>
+                <p class="fluxo-efeito"><strong>De 1 a 3 dias para dar baixa.</strong> Sem o extrato, comprovantes falsos passavam.</p>
               </div>
               <div class="fluxo-linha">
                 <p class="fluxo-rotulo">Depois</p>
@@ -91,8 +91,9 @@
                   <li>Pagamento cai na conta</li>
                   <li class="auto">n8n integra as APIs Pix e Extrato</li>
                   <li class="auto">Aviso no WhatsApp do caixa</li>
+                  <li>Caixa dá baixa na hora</li>
                 </ol>
-                <p class="fluxo-efeito"><strong>Aviso em tempo real, validado pelo extrato.</strong> Cerca de 30 transações por dia, em duas empresas.</p>
+                <p class="fluxo-efeito"><strong>Baixa em tempo real, com conciliação de 100% via extrato.</strong> Cerca de 30 pagamentos por dia, em duas empresas.</p>
               </div>
               <div class="fluxo-linha">
                 <p class="fluxo-rotulo">Gestão</p>
@@ -108,20 +109,20 @@
           <div class="projeto-corpo">
             <div>
               <h4>Ponto de partida</h4>
-              <p>Mapeei o processo com vendedores, caixa e financeiro. A confirmação de cada pagamento dependia do financeiro, único com acesso ao extrato, e levava de 3 a 8 minutos por transação. Pagamentos remotos só eram identificados quando o cliente avisava. Sem o extrato, o caixa aceitava o comprovante do cliente, e alguns eram falsos.</p>
+              <p>Mapeei o processo com vendedores, caixa e financeiro. O cliente enviava o comprovante ao vendedor, que repassava a um grupo com caixa e financeiro. O caixa não podia dar baixa na hora, porque não tinha certeza se o pagamento tinha caído, e o financeiro levava tempo para conferir todos os pagamentos. A baixa no sistema levava de 1 a 3 dias e gerava confusão. Sem o extrato, o caixa dependia do comprovante do cliente, e alguns eram falsos.</p>
             </div>
             <div>
               <h4>O que fiz</h4>
-              <p>Integrei as APIs Pix e de Extrato do Bradesco ao n8n e ao WhatsApp. O caixa passou a receber em tempo real os avisos de Pix, TED e transferências entre contas, validados pelo extrato e não pelo comprovante.</p>
+              <p>Integrei as APIs Pix e Extrato do Bradesco, com autenticação OAuth e mTLS, ao n8n via webhooks e ao WhatsApp. O caixa passou a receber em tempo real os avisos de Pix, TED e transferências entre contas, validados pelo extrato e não pelo comprovante.</p>
             </div>
             <div>
               <h4>Resultado</h4>
-              <p>A consulta manual acabou, inclusive nos pagamentos remotos, e a validação pelo extrato eliminou as tentativas de fraude com comprovantes falsos. A solução roda em Docker numa VPS, foi replicada em uma segunda empresa e segue em uso, com cerca de 30 transações por dia. Sigo fazendo a manutenção.</p>
+              <p>A baixa de cerca de 30 pagamentos por dia passou de 1 a 3 dias para tempo real, com conciliação automática de 100% dos recebimentos via extrato. O caixa dá baixa no momento do pagamento, sem depender do financeiro, a troca de comprovantes acabou e a validação pelo extrato eliminou o risco de fraude com comprovantes falsos. A solução roda em Docker numa VPS, foi replicada em uma segunda empresa e segue em uso.</p>
             </div>
           </div>
           <div class="gestao">
             <h4>Dados para a gestão</h4>
-            <p>Criei dashboards no Power BI com visões diária, semanal e mensal. Eles mostram o valor recebido por dia, a média diária, a divisão por tipo de Pix, por período do mês e por dia da semana, e o ranking de clientes por valor.</p>
+            <p>Tratei e limpei os dados das movimentações em Python (pandas) e no Power BI (Power Query). Depois, criei dashboards no Power BI, usados por proprietários e gerentes, com visões diária, semanal e mensal. Eles mostram o valor recebido por dia, a média diária, a divisão por tipo de Pix, os dias da semana e as semanas do mês com mais pagamentos, e os 10 maiores pagadores com sua participação no faturamento.</p>
             <p>Também escrevi uma análise mensal em Python, com pandas e matplotlib, dos recebimentos e da concentração de faturamento por cliente. O relatório é enviado automaticamente por e-mail. Os recebimentos também ficam registrados em planilhas de acompanhamento no Google Sheets.</p>
           </div>
           <figure class="painel-bi">
@@ -131,7 +132,7 @@
           <div class="stack">
             <h5>Tecnologias</h5>
             <ul>
-              <li>n8n</li><li>APIs Bradesco (Pix e Extrato)</li><li>API WhatsApp</li><li>Python (pandas, matplotlib)</li><li>Google Sheets</li><li>Power BI</li><li>Docker</li><li>VPS</li>
+              <li>n8n</li><li>Webhooks</li><li>APIs Bradesco (Pix e Extrato)</li><li>OAuth</li><li>mTLS</li><li>API WhatsApp</li><li>Python (pandas, matplotlib)</li><li>Google Sheets</li><li>Power BI (Power Query)</li><li>Docker</li><li>VPS</li>
             </ul>
           </div>
         </article>
@@ -145,16 +146,16 @@
             <div class="site">
               <h4>A Loja do Dilo Materiais para Construção</h4>
               <p class="periodo">ago. a set. 2026</p>
-              <p>Desenvolvi uma vitrine digital com categorias, produtos e ofertas do mês, feita com apoio de IA (Claude Code) e publicada na Vercel. O site leva o cliente direto ao atendimento via WhatsApp para orçamentos e encomendas.</p>
+              <p>A loja recebia muitas ligações de clientes perguntando o que ela vendia. Desenvolvi uma vitrine digital com categorias, produtos e ofertas do mês, feita com apoio de IA (Claude Code) e publicada na Vercel. O site leva o cliente direto ao atendimento via WhatsApp para orçamentos e encomendas. Também montei o catálogo do WhatsApp Business com fotos e informações, configurei mensagens rápidas, de saudação e de ausência e atualizei o perfil no Google Business.</p>
               <p class="site-link"><a class="link-ext" href="https://www.alojadodilomateriais.com.br" target="_blank" rel="noopener">alojadodilomateriais.com.br<span class="sr"> (abre em nova aba)</span></a></p>
-              <ul class="tags" aria-label="Tecnologias"><li>Claude Code</li><li>Vercel</li><li>Integração com WhatsApp</li></ul>
+              <ul class="tags" aria-label="Tecnologias"><li>Claude Code</li><li>Vercel</li><li>WhatsApp Business</li><li>Google Business</li></ul>
             </div>
             <div class="site">
               <h4>A Loja do Dilo Transportes</h4>
               <p class="periodo">jan. a mar. 2025</p>
-              <p>Desenvolvi o site institucional em WordPress, hospedado na Hostinger. Hoje ele é o principal canal de apresentação da empresa a novos clientes.</p>
+              <p>A empresa não tinha site nem perfil no Google Business e não era encontrada por clientes de outras cidades. Desenvolvi o site institucional em WordPress, hospedado na Hostinger, e criei o perfil da empresa no Google Business, que a tornou encontrável em buscas e no Google Maps. Hoje o site é o principal canal de apresentação da empresa a novos clientes.</p>
               <p class="site-link"><a class="link-ext" href="https://alojadodilotransportes.com.br" target="_blank" rel="noopener">alojadodilotransportes.com.br<span class="sr"> (abre em nova aba)</span></a></p>
-              <ul class="tags" aria-label="Tecnologias"><li>WordPress</li><li>Hostinger</li></ul>
+              <ul class="tags" aria-label="Tecnologias"><li>WordPress</li><li>Hostinger</li><li>Google Business</li></ul>
             </div>
           </div>
         </article>
@@ -167,13 +168,13 @@
           <h2 id="habilidades-titulo">Habilidades</h2>
         </div>
         <dl class="habilidades">
-          <div><dt>Dados e análise</dt><dd>SQL / PostgreSQL, Python (pandas, NumPy, matplotlib)</dd></div>
-          <div><dt>Visualização</dt><dd>Power BI, Excel, Google Sheets</dd></div>
-          <div><dt>Automação e infraestrutura</dt><dd>n8n, Docker, VPS, APIs REST</dd></div>
-          <div><dt>Linguagens</dt><dd>Python, Java, C</dd></div>
-          <div><dt>Versionamento</dt><dd>Git / GitHub</dd></div>
-          <div><dt>Produtividade com IA</dt><dd>Desenvolvimento assistido por IA (Claude Code) e uso de LLMs na análise de dados</dd></div>
-          <div class="estudo"><dt>Em estudo</dt><dd>Machine learning com Python</dd></div>
+          <div><dt>Dados e análise</dt><dd>SQL / PostgreSQL, Python (pandas, NumPy, matplotlib), tratamento e limpeza de dados</dd></div>
+          <div><dt>BI e visualização</dt><dd>Power BI (Power Query), KPIs, Excel (tabela dinâmica, PROCV, gráficos), Google Sheets</dd></div>
+          <div><dt>Automação e integração</dt><dd>n8n, APIs REST, webhooks, OAuth, mTLS, Docker, VPS</dd></div>
+          <div><dt>Linguagens</dt><dd>Python, SQL, Java, C, JavaScript, HTML, CSS</dd></div>
+          <div><dt>Desenvolvimento</dt><dd>Programação Orientada a Objetos (POO), integração de sistemas, Git / GitHub</dd></div>
+          <div><dt>IA aplicada</dt><dd>Desenvolvimento assistido por IA (Claude Code) e uso de LLMs na análise de dados</dd></div>
+          <div class="estudo"><dt>Em estudo</dt><dd>Machine learning com Python (Applied Machine Learning in Python, em andamento)</dd></div>
         </dl>
       </div>
     </section>
@@ -196,8 +197,9 @@
             <ul class="certs">
               <li><strong>PostgreSQL for Everybody</strong><span>University of Michigan, Coursera. Ago. 2026.</span></li>
               <li><strong>Python for Everybody</strong><span>University of Michigan, Coursera. Abr. 2026.</span></li>
-              <!-- PENDENTE: datas de conclusão dos dois cursos abaixo. -->
-              <li><strong>Introduction to Data Science in Python e Applied Plotting, Charting &amp; Data Representation in Python</strong><span>University of Michigan, Coursera. 2 de 5 cursos de uma especialização em andamento.</span></li>
+              <li><strong>Introduction to Data Science in Python</strong><span>University of Michigan, Coursera.</span></li>
+              <li><strong>Applied Plotting, Charting &amp; Data Representation in Python</strong><span>University of Michigan, Coursera.</span></li>
+              <li><strong>Applied Machine Learning in Python</strong><span>University of Michigan, Coursera. Em andamento.</span></li>
             </ul>
           </div>
         </div>
