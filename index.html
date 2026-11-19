@@ -80,8 +80,8 @@
                 <ol class="passos">
                   <li>Cliente envia o comprovante ao vendedor</li>
                   <li>Vendedor repassa ao grupo do caixa e financeiro</li>
-                  <li class="gargalo">Caixa espera o financeiro confirmar</li>
-                  <li>Baixa no sistema</li>
+                  <li class="gargalo">Financeiro confere o extrato</li>
+                  <li>Financeiro dá baixa no sistema</li>
                 </ol>
                 <p class="fluxo-efeito"><strong>De 1 a 3 dias para dar baixa.</strong> Sem o extrato, comprovantes falsos passavam.</p>
               </div>
@@ -109,7 +109,7 @@
           <div class="projeto-corpo">
             <div>
               <h4>Ponto de partida</h4>
-              <p>Mapeei o processo com vendedores, caixa e financeiro. O cliente enviava o comprovante ao vendedor, que repassava a um grupo com caixa e financeiro. O caixa não podia dar baixa na hora, porque não tinha certeza se o pagamento tinha caído, e o financeiro levava tempo para conferir todos os pagamentos. A baixa no sistema levava de 1 a 3 dias e gerava confusão. Sem o extrato, o caixa dependia do comprovante do cliente, e alguns eram falsos.</p>
+              <p>Mapeei o processo com vendedores, caixa e financeiro. O cliente enviava o comprovante ao vendedor, que repassava a um grupo com caixa e financeiro. O caixa não tinha como confirmar se o pagamento tinha caído. Era preciso esperar o financeiro, que tem outras atividades e muitos pagamentos para conferir, verificar o extrato e dar baixa no sistema. Isso levava de 1 a 3 dias e gerava confusão. Sem o extrato, o caixa dependia do comprovante do cliente, e alguns eram falsos.</p>
             </div>
             <div>
               <h4>O que fiz</h4>
@@ -117,7 +117,7 @@
             </div>
             <div>
               <h4>Resultado</h4>
-              <p>A baixa de cerca de 30 pagamentos por dia passou de 1 a 3 dias para tempo real, com conciliação automática de 100% dos recebimentos via extrato. O caixa dá baixa no momento do pagamento, sem depender do financeiro, a troca de comprovantes acabou e a validação pelo extrato eliminou o risco de fraude com comprovantes falsos. A solução roda em Docker numa VPS, foi replicada em uma segunda empresa e segue em uso.</p>
+              <p>O tempo de baixa de cerca de 30 pagamentos por dia passou de 1 a 3 dias para tempo real, com conciliação automática de 100% dos recebimentos via extrato. O caixa vê o pagamento cair no WhatsApp e dá baixa na hora, sem esperar a conferência do financeiro. A troca de comprovantes acabou e a validação pelo extrato eliminou o risco de fraude com comprovantes falsos. A solução roda em Docker numa VPS, foi replicada em uma segunda empresa e segue em uso.</p>
             </div>
           </div>
           <div class="gestao">
